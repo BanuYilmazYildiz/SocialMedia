@@ -1,23 +1,21 @@
 package com.banu.repository.entity;
 
 import com.banu.utility.enums.Status;
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 
 @Data
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
+@Document
 public class UserProfile extends BaseEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private String id;
 
     private Long authId;
 
@@ -31,10 +29,9 @@ public class UserProfile extends BaseEntity{
 
     private String address;
 
-    private String abut;
+    private String about;
 
     @Builder.Default
-    @Enumerated(EnumType.STRING)
     private Status status=Status.PENDING;
 
 

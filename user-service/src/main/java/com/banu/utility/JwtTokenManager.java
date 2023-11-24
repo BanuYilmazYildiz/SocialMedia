@@ -95,18 +95,5 @@ public class JwtTokenManager {
         }
     }
 
-    public Optional<String> getRoleFromToken(String token) {
-        try {
-            Algorithm algorithm = Algorithm.HMAC512(secretKey);
-            JWTVerifier verifier = JWT.require(algorithm).withIssuer(issuer).withAudience(audience).build();
-            DecodedJWT decodedJWT = verifier.verify(token);
-            if (decodedJWT == null) {
-                throw new UserManagerException(ErrorType.INVALID_TOKEN);
-            }
-            String role = decodedJWT.getClaim("role").asString();
-            return Optional.of(role);
-        } catch (Exception e) {
-            throw new UserManagerException(ErrorType.INVALID_TOKEN);
-        }
-    }
+
 }

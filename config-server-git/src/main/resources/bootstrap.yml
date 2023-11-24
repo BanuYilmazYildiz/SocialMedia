@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: config-server-git
+  profiles:
+    active: development
+
+# serverı git e bağlayabilmek icin

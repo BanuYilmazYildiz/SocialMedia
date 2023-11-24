@@ -4,6 +4,13 @@ buildscript {
     }
 }
 dependencies {
-    implementation libs.springBootJpa
-    implementation libs.postgresql
+//    implementation libs.springBootJpa
+//    implementation libs.postgresql
+    implementation libs.springCloudConfigClient
+    implementation libs.springBootRabbitMq
+    implementation libs.springBootDataMongo
 }
+
+// docker run --name java11mongodb -e MONGO_INITDB_ROOT_USERNAME=mongo -e MONGO_INITDB_ROOT_PASSWORD=root -p 27017:27017 -d mongo
+
+// db.createUser ({user:"java11user",pwd:"root",roles:["readWrite","dbAdmin"]})

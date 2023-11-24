@@ -37,6 +37,7 @@ allprojects {
             mavenCentral()
         }
     }
+
     dependencies {
         implementation libs.springBootWeb
         implementation libs.springBootValidation
@@ -47,6 +48,9 @@ allprojects {
         annotationProcessor libs.mapstructProcessor
         implementation libs.springOpenFeign
         implementation libs.javajwt
+        implementation libs.springBootDataRedis
+//        implementation libs.springCloudSleuthZipkin
+//        implementation libs.springCloudSleuth
 
     }
     configurations {

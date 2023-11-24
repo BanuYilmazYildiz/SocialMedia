@@ -15,7 +15,9 @@ public enum ErrorType {
     INVALID_TOKEN(4114, "Geçersiz token", HttpStatus.BAD_REQUEST),
     LOGIN_ERROR(4100, "Kullanıcı adı veya şifre hatalı", HttpStatus.BAD_REQUEST),
     ACCOUNT_NOT_ACTIVE(4115,"Hesabınız aktive değildir. Lütfen hesabınızı aktif hale getirin" ,HttpStatus.BAD_REQUEST ),
-    TOKEN_NOT_CREATED(4116,"Token oluşturulamadı" ,HttpStatus.BAD_REQUEST );
+    TOKEN_NOT_CREATED(4116,"Token oluşturulamadı" ,HttpStatus.BAD_REQUEST ),
+    USER_NOT_CREATED(4117,"Kullanıcı oluşturulamadı" ,HttpStatus.BAD_REQUEST ),
+    ROLE_NOT_FOUND(4118,"Böyle bir kullanıcı rolu bulunmamaktadır" ,HttpStatus.BAD_REQUEST );
 
 
     private int code;
